@@ -51,3 +51,9 @@ Two users will be created by default which are listed below -
     Host User - username: host, password: password
     Participant User - username: participant, password: password
     ```
+
+7. Push the docker image to arena backend
+
+   ```bash
+   arena push -p phase [image]:[tag]
+   ```

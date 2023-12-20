@@ -19,7 +19,7 @@ class PyTest(TestCommand):
         sys.exit(pytest.main(self.test_args))
 
 
-PROJECT = "arena"
+PROJECT = "arena-cli"
 package_config = {}
 version_file_path = convert_path("arena/version.py")
 
