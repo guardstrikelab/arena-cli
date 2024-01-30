@@ -39,12 +39,12 @@ from arena.config import (
 )
 @click.option("--public", is_flag=True)
 @click.option("--private", is_flag=True)
-def push(image, phase, url, public, private):
+def push(image, track, url, public, private):
     """
     Push docker image to a particular challenge track.
     """
     """
-    Invoked by `arena push IMAGE:TAG -p TRACK_ID`.
+    Invoked by `arena push IMAGE:TAG -t TRACK_ID`.
     """
     if len(image.split(":")) != 2:
         message = "\nError: Please enter the tag name with image.\n\nFor eg: `arena push ubuntu:latest --track 123`"
@@ -72,7 +72,7 @@ def push(image, phase, url, public, private):
         sys.exit(1)
 
     request_path = URLS.phase_details_using_slug.value
-    request_path = request_path.format(phase)
+    request_path = request_path.format(track)
     response = make_request(request_path, "GET")
     challenge_pk = response.get("challenge")
     phase_pk = response.get("id")
