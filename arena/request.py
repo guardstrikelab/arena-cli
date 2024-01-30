@@ -62,8 +62,8 @@ def make_request(path, method, files=None, data=None):
                     style(
                         "\nError: {}\n"
                         "\nUse `arena challenges` to fetch the active challenges.\n"
-                        "\nUse `arena challenge CHALLENGE phases` to fetch the "
-                        "active phases.\n".format(response.json()["error"]),
+                        "\nUse `arena challenge CHALLENGE tracks` to fetch the "
+                        "active tracks.\n".format(response.json()["error"]),
                         fg="red",
                         bold=True,
                     )
@@ -87,15 +87,6 @@ def make_request(path, method, files=None, data=None):
                 "\nYour docker file is successfully submitted.\n",
                 fg="green",
                 bold=True,
-            )
-        )
-        echo(
-            style(
-                "You can use `arena submission {}` to view this submission's status.\n".format(
-                    response.get("id")
-                ),
-                bold=True,
-                fg="white"
             )
         )
         return response

@@ -283,7 +283,7 @@ def upload_file_using_presigned_url(challenge_phase_pk, file, file_type, submiss
             file.name, submission_pk
         )
     elif file_type == "annotation":
-        success_message = "\nThe annotation file {} for challenge phase {} is successfully uploaded.\n".format(
+        success_message = "\nThe annotation file {} for challenge track {} is successfully uploaded.\n".format(
             file.name, challenge_phase_pk
         )
     echo(

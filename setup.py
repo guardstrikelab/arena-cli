@@ -23,8 +23,8 @@ PROJECT = "arena-cli"
 package_config = {}
 version_file_path = convert_path("arena/version.py")
 
-# with io.open("README.md", encoding="utf-8") as f:
-#     long_description = f.read()
+with io.open("README.md", encoding="utf-8") as f:
+    long_description = f.read()
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
@@ -48,7 +48,7 @@ setup(
     cmdclass={"test": PyTest},
     version=package_config["__version__"],
     description="Use Arena through command line interface",
-    long_description="",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     author="Synkrotron",
     author_email="",

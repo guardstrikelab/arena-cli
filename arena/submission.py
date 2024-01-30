@@ -24,9 +24,9 @@ from arena.config import (
 @click.command()
 @click.argument("IMAGE", nargs=1)
 @click.option(
-    "-p",
-    "--phase",
-    help="challenge-phase-name to which image is to be pushed",
+    "-t",
+    "--track",
+    help="challenge-track-name to which image is to be pushed",
     required=True,
 )
 # Dependency Injection for Local Registry URI for Dev and Test environment
@@ -41,13 +41,13 @@ from arena.config import (
 @click.option("--private", is_flag=True)
 def push(image, phase, url, public, private):
     """
-    Push docker image to a particular challenge phase.
+    Push docker image to a particular challenge track.
     """
     """
-    Invoked by `arena push IMAGE:TAG -p PHASE_ID`.
+    Invoked by `arena push IMAGE:TAG -p TRACK_ID`.
     """
     if len(image.split(":")) != 2:
-        message = "\nError: Please enter the tag name with image.\n\nFor eg: `arena push ubuntu:latest --phase 123`"
+        message = "\nError: Please enter the tag name with image.\n\nFor eg: `arena push ubuntu:latest --track 123`"
         notify_user(message, color="red")
         sys.exit(1)
 

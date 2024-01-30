@@ -5,13 +5,27 @@
 Arena-CLI is designed to extend the functionality of the Arena web application to command line to make the platform more accessible and terminal-friendly to its users.
 
 ------------------------------------------------------------------------------------------
+## Usage
+Set token
 
-## Installation
+```bash
+arena set_token [TOKEN]
+```
+
+Push the docker image to arena backend
+
+```bash
+arena push -t track [IMAGE]:[TAG]
+```
+
+## Source Installation
 
 Arena-CLI and its required dependencies can be installed using pip:
-```sh
-pip install arena
-```
+
+   ```sh
+   pip install arena
+   ```
+
 Once Arena-CLI is installed, check out the [usage documentation](https://cli.eval.ai/).
 
 ## Development Setup
@@ -55,5 +69,5 @@ Two users will be created by default which are listed below -
 7. Push the docker image to arena backend
 
    ```bash
-   arena push -p phase [image]:[tag]
+   arena push -t track [image]:[tag]
    ```

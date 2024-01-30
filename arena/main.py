@@ -23,8 +23,8 @@ def main(ctx):
                         ##   ##  ##   ##  #######  ##   ##  ##   ## \n\n
                         """
             "Welcome to the Arena CLI. Use arena --help for viewing all the options\n"
-            "CHALLENGE and PHASE placeholders used throughout the CLI are"
-            " for challenge_id\nand phase_id of the challenges and phases."
+            "CHALLENGE and TRACK placeholders used throughout the CLI are"
+            " for challenge_id\nand track_id of the challenges and tracks."
         )
         echo(welcome_text)
     # latest_version = get_latest_version()
